@@ -1,10 +1,15 @@
 # test-centrakor
 Repertoire de code pour le test Technique Cargo d'intégration d'une page Centrakor
 
-## Installation 
+## 1. Installation 
 Initalisation de la structure HTML
 - rajout des balises meta d'accessibilité et de SEO
 - Installation et découverte de LESS (lecture de la doc) pour la gestion des feuilles de styles
+
+    Pour installer LESS, j'ai suivi les étapes suivantes :
+
+    <details>
+
     - Installation de LESS en global : 
 
         ```npm i less -g```
@@ -21,9 +26,11 @@ Initalisation de la structure HTML
 
         ```less-watch-compiler```
 
+    </details>
+
 Tout à l'air opérationnel, je vais pouvoir commencer à coder la page Centrakor. Pour l'instant je n'utiliserais pas de framework CSS, la maquette est simple et je vais essayer de faire un code propre et lisible.
 
-## Analyse de la maquette
+## 2. Analyse de la maquette
 
 La maquette est simple, elle est composée de 4 sections :
 
@@ -42,3 +49,7 @@ La maquette est simple, elle est composée de 4 sections :
 - **Section Footer** :  
     Le footer est composé du logo de la marque dans un cercle, un H2 avec "qui sommes-nous ?" et un bouton "découvrez Centrakor", et en dessous des call-to-action vers les différents réseaux sociaux de la marque.  
     **Mobile** : Le rond avec le logo se retrouve au dessus du bloc "Qui sommes-nous ?" et du bouton "découvrez Centrakor". Le reste de la disposition ne change pas.
+
+## 3. Structure HTML
+
+Je vais commencer par créer la structure HTML de la page. Pas ou peu de style pour l'instant, je commence par poser les bases.

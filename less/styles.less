@@ -1,5 +1,57 @@
-@primary-color: red; 
+// @primary-color: red; 
+@dark-green: #004542;
 
 body {
-    background: @primary-color;
+    margin: 0;
+}
+
+.header-container {
+    background: @dark-green;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem;
+    
+    &__logo {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &--button {
+            width: 15rem;
+        }
+    }
+    &__media {
+        // width: 50%;
+        &--image {
+            max-width: 42rem;
+        }
+    }
 } 
+
+.product-container {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.searchbar-container {
+    padding: 3rem;
+    background-color: @dark-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__inputs {
+        background: white;
+        padding: 3rem;
+    }
+}
+
+.footer-container {
+    display: flex;
+    padding: 6rem;
+    justify-content: center;
+}

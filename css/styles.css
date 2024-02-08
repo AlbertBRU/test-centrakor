@@ -1,3 +1,45 @@
 body {
-  background: red;
+  margin: 0;
+}
+.header-container {
+  background: #004542;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+.header-container__logo {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header-container__logo--button {
+  width: 15rem;
+}
+.header-container__media--image {
+  max-width: 42rem;
+}
+.product-container {
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.searchbar-container {
+  padding: 3rem;
+  background-color: #004542;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchbar-container__inputs {
+  background: white;
+  padding: 3rem;
+}
+.footer-container {
+  display: flex;
+  padding: 6rem;
+  justify-content: center;
 }
