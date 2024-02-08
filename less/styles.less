@@ -6,19 +6,21 @@
 @light-green: #50B6B2;
 
 @light-grey: #F5F5F5;
-@dark-grey: #333333;
-
+@dark-grey: #434343;
 
 // Global
 body {
     margin: 0;
+
     p {
         all: unset;
     }
+
     button {
         all: unset;
         cursor: pointer;
     }
+
     .cta-button {
         background-color: @light-green;
         padding: 1.2rem 2rem;
@@ -39,7 +41,7 @@ body {
     display: flex;
     padding: 4rem;
     align-items: center;
-    
+
     &__logo {
         display: flex;
         flex-direction: column;
@@ -50,6 +52,7 @@ body {
             width: 28rem;
             max-width: 80vw;
         }
+
         &--subtitle {
             max-width: 47rem;
             font-size: 5rem;
@@ -61,13 +64,16 @@ body {
             color: transparent;
             text-shadow: 0px 0px 20px @yellow;
         }
+
         &--button {
             text-transform: uppercase;
+
             &--icon {
                 padding-right: 1rem;
             }
         }
     }
+
     &__media {
         position: relative;
         flex: 1;
@@ -75,12 +81,14 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
+
         &--image {
             width: 40vw;
             height: 40vw;
             max-width: 45rem;
             max-height: 45rem;
         }
+
         &--pastille {
             position: absolute;
             top: 0.5rem;
@@ -89,7 +97,7 @@ body {
             max-width: 20vw;
         }
     }
-} 
+}
 
 // Header responsive
 @media screen and (max-width: 900px) {
@@ -97,26 +105,31 @@ body {
         flex-direction: column;
         align-items: center;
         padding-bottom: 0;
+
         &__logo {
             &--subtitle {
                 font-size: 3rem;
             }
+
             .cta-button {
                 padding: 0.5rem;
                 font-size: 0.9rem;
                 width: 80vw;
+
                 img {
                     width: 1.5rem;
                     padding: 0.3rem;
                 }
             }
         }
+
         &__media {
             &--image {
                 width: 100vw;
                 height: 100vw;
                 margin-top: 2rem;
             }
+
             &--pastille {
                 position: absolute;
                 top: 70vw;
@@ -124,7 +137,7 @@ body {
             }
         }
     }
-    
+
 }
 
 // Product
@@ -145,11 +158,13 @@ body {
             padding: 1rem;
             max-width: 80vw;
         }
+
         &__title {
             font-weight: bold;
             font-family: 'Montserrat', sans-serif;
             margin: 1rem 0;
         }
+
         &__price {
             position: absolute;
             top: 0;
@@ -173,12 +188,14 @@ body {
                 grid-row: 1 / span 2;
                 grid-column: 1 / span 2;
             }
+
             .euros {
                 text-align: start;
                 font-size: 3rem;
                 grid-row: 1;
                 grid-column: 3;
             }
+
             .cents {
                 font-size: 3rem;
                 grid-row: 2;
@@ -190,6 +207,7 @@ body {
         .less-than-ten {
             background-color: @light-green;
             grid-template-columns: repeat(1, 1fr);
+
             .price {
                 grid-column: 1 / span 1;
             }
@@ -202,16 +220,18 @@ body {
     .product-container {
         flex-direction: column;
         align-items: center;
+
         &__carousel {
+            max-width: 70vw;
+
             &__price {
-                left: 0;
+                left: -1rem;
                 top: 0;
                 padding: 0.5rem 0.5rem;
             }
         }
     }
 }
-
 
 // Searchbar
 .searchbar-container {
@@ -221,22 +241,147 @@ body {
     flex-direction: column;
     align-items: center;
 
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: @white;
+        text-shadow: 0px 0px 20px @light-green;
+    }
+
+    // Mixin pour les styles communs aux deux types d'inputs
+    .input-common-styles() {
+        display: flex;
+        flex: 1;
+        position: relative;
+        margin-right: 1.5rem;
+
+        &--input {
+            flex: 1;
+            height: 4.2rem;
+            padding-left: 1rem;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        &--button {
+            position: absolute;
+            right: 0;
+            border-radius: 5px;
+            height: 4.5rem;
+            width: 4.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    // Cadre blanc des inputs
     &__inputs {
         background: white;
-        padding: 3rem;
+        padding: 3rem 8rem;
+        width: 77rem;
+        max-width: 70vw;
+        border-radius: 5px;
+        opacity: 0.9;
+        display: flex;
+        flex-wrap: wrap;
+
+        // Injections des styles communs, on ne rajoute que la couleur
+        &--search {
+            .input-common-styles();
+
+            &--button {
+                background-color: black;
+            }
+        }
+
+        &--geoloc {
+            .input-common-styles();
+
+            &--input {
+                border: 1px solid @light-green;
+                &::placeholder {
+                    color: @light-green;
+                }
+            }
+            
+            &--button {
+                background-color: @light-green;
+            }
+        }
+    }
+}
+
+// Searchbar responsive
+@media screen and (max-width: 900px) {
+    .searchbar-container {
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__inputs {
+            padding: 1rem 2rem;
+            width: 100%;
+            flex-direction: column;
+
+            &--search {
+                width: 100%;
+                &--input {
+                    padding-left: 0.5rem;
+                }
+            }
+
+            &--geoloc {
+                width: 100%;
+                margin-top: 1rem;
+                &--input {
+                    padding-left: 0.5rem;
+                }
+            }
+
+        }
     }
 }
 
 // Footer
 .footer-container {
     display: flex;
-    padding: 6rem;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
     &__logo {
-        img {
-            max-width: 80vw;
+        // border: 2px solid red;
+        max-width: 80vw;
+        margin:  4rem;
+
+    }
+    &__about-us {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        // border: 2px solid blue;
+        
+        &--title {
+            text-transform: uppercase;
+            color: @dark-grey;
+            font-size: 2.2rem;
+        }
+
+        &--button {
+            margin-bottom: 2rem;
+        }
+
+        &--text {
+            color: @dark-grey;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
     }
 }

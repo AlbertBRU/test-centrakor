@@ -57,3 +57,30 @@ Je vais commencer par créer la structure HTML de la page. Pas ou peu de style p
 ## 4. Ajout des styles
 
 Je vais rajouter les différentes regles CSS pour mettre en forme la page. Le site doit être totalement responsive, je pense vérifier la responsivité à chaque étape de la création de la page.
+
+=== WIP ===
+
+## 5. Gestion des formulaires
+- TODO: Mettre en place les forms qui renvoient "merci de votre recherche" lorsqu'on valide l'input.
+
+## 6. Gestion des carousels
+- Trouver une lib pour les carousels, ou les coder à la main? 
+
+## 7. Gestion des médias
+- Se documenter sur l'option d'une video en background pour le header, avec un fallback image pour les mobiles?
+
+## 8. Gestion des réseaux sociaux
+- Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
+
+## 9. Gestion des images de cadeaux et de flocons
+
+## 10. Gestion de l'anchor link
+- Dans le bouton du header, rediriger vers la section "recherche de magasin"
+
+
+## Last. Difficultés rencontrées
+
+- Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "varable". 
+- Les grids. J'ai peu pratiqué les grids, et je me suis dit que ca serait une solution sympa pour le pricing des produits. J'ai donc fait un peu de recherche sur les grids, et j'ai réussi à les mettre en place, tant bien que mal (ce n'est pas parfait, l'élément grid m'empêchant de mettre en place le :after pour le pseudo-élément de la bulle de dialogue).
+-Intégration CSS un peu plus compliquée que prévue, notamment pour la manipulation des éléments en position absolute et leur placement responsive.
+- Je n'ai pas fait les formes arrondies en background, j'ai déjà passé trop de temps sur le CSS pour le reste.
