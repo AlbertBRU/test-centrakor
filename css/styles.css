@@ -1,25 +1,94 @@
 body {
   margin: 0;
 }
+body button {
+  all: unset;
+  cursor: pointer;
+}
+body .cta-button {
+  background-color: #50B6B2;
+  padding: 1.2rem 2rem;
+  border-radius: 2rem;
+  color: #FFFFFF;
+  font-family: museo-sans, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
 .header-container {
   background: #004542;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding: 4rem;
-}
-.header-container__logo {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
 }
+.header-container__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-container__logo--img {
+  width: 28rem;
+  max-width: 80vw;
+}
+.header-container__logo--subtitle {
+  max-width: 47rem;
+  font-size: 5rem;
+  -webkit-text-stroke: 2px white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  src: url(assets/fonts/Montserrat-Bold.ttf);
+  color: transparent;
+  text-shadow: 0px 0px 20px #E7AF00;
+}
 .header-container__logo--button {
-  width: 15rem;
+  text-transform: uppercase;
+}
+.header-container__logo--button--icon {
+  padding-right: 1rem;
+}
+.header-container__media {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .header-container__media--image {
-  max-width: 42rem;
+  width: 40vw;
+  height: 40vw;
+  max-width: 45rem;
+  max-height: 45rem;
+}
+.header-container__media--pastille {
+  position: absolute;
+  top: 0.5rem;
+  left: 3rem;
+  width: 20%;
+  max-width: 10rem;
+}
+@media screen and (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .header-container__logo--subtitle {
+    font-size: 3rem;
+  }
+  .header-container__media--image {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 2rem;
+  }
+  .header-container__media--pastille {
+    border: 1px solid red;
+    position: absolute;
+    top: 80vw;
+    left: 75vw;
+  }
 }
 .product-container {
   margin: 3rem;

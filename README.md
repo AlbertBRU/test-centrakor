@@ -53,3 +53,7 @@ La maquette est simple, elle est composée de 4 sections :
 ## 3. Structure HTML
 
 Je vais commencer par créer la structure HTML de la page. Pas ou peu de style pour l'instant, je commence par poser les bases.
+
+## 4. Ajout des styles
+
+Je vais rajouter les différentes regles CSS pour mettre en forme la page. Le site doit être totalement responsive, je pense vérifier la responsivité à chaque étape de la création de la page.

@@ -1,35 +1,118 @@
-// @primary-color: red; 
+// Colors
+@white: #FFFFFF;
 @dark-green: #004542;
+@yellow: #E7AF00;
+@light-green: #50B6B2;
 
+
+// Global
 body {
     margin: 0;
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+    .cta-button {
+        background-color: @light-green;
+        padding: 1.2rem 2rem;
+        border-radius: 2rem;
+        color: @white;
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
 }
 
+// Header
 .header-container {
     background: @dark-green;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     padding: 4rem;
+    align-items: center;
     
     &__logo {
-        width: 45%;
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
+
+        &--img {
+            width: 28rem;
+            max-width: 80vw;
+        }
+        &--subtitle {
+            max-width: 47rem;
+            font-size: 5rem;
+            -webkit-text-stroke: 2px white;
+            text-align: center;
+            // issue with the imported font overlapping
+            // https://github.com/google/fonts/issues/4212
+            font-family: 'Montserrat', sans-serif;
+            src: url(assets/fonts/Montserrat-Bold.ttf);
+            color: transparent;
+            text-shadow: 0px 0px 20px @yellow;
+        }
         &--button {
-            width: 15rem;
+            text-transform: uppercase;
+            &--icon {
+                padding-right: 1rem;
+            }
         }
     }
     &__media {
-        // width: 50%;
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         &--image {
-            max-width: 42rem;
+            width: 40vw;
+            height: 40vw;
+            max-width: 45rem;
+            max-height: 45rem;
+        }
+        &--pastille {
+            position: absolute;
+            top: 0.5rem;
+            left: 3rem;
+            width: 20%;
+            max-width: 10rem;
         }
     }
 } 
 
+// Header responsive
+@media screen and (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+        &__logo {
+            &--subtitle {
+                font-size: 3rem;
+            }
+        }
+        &__media {
+            &--image {
+                width: 100vw;
+                height: 100vw;
+                margin-top: 2rem;
+            }
+            &--pastille {
+                border: 1px solid red;
+                position: absolute;
+                top: 80vw;
+                left: 75vw;
+            }
+        }
+    }
+    
+}
+
+// Product
 .product-container {
     margin: 3rem;
     display: flex;
@@ -37,6 +120,7 @@ body {
     justify-content: space-evenly;
 }
 
+// Searchbar
 .searchbar-container {
     padding: 3rem;
     background-color: @dark-green;
@@ -50,6 +134,7 @@ body {
     }
 }
 
+// Footer
 .footer-container {
     display: flex;
     padding: 6rem;
