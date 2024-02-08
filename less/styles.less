@@ -1,13 +1,20 @@
 // Colors
 @white: #FFFFFF;
-@dark-green: #004542;
 @yellow: #E7AF00;
+@dark-blue: #00232F;
+@dark-green: #004542;
 @light-green: #50B6B2;
+
+@light-grey: #F5F5F5;
+@dark-grey: #333333;
 
 
 // Global
 body {
     margin: 0;
+    p {
+        all: unset;
+    }
     button {
         all: unset;
         cursor: pointer;
@@ -22,6 +29,7 @@ body {
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 }
 
@@ -50,7 +58,6 @@ body {
             // issue with the imported font overlapping
             // https://github.com/google/fonts/issues/4212
             font-family: 'Montserrat', sans-serif;
-            src: url(assets/fonts/Montserrat-Bold.ttf);
             color: transparent;
             text-shadow: 0px 0px 20px @yellow;
         }
@@ -79,7 +86,7 @@ body {
             top: 0.5rem;
             left: 3rem;
             width: 20%;
-            max-width: 10rem;
+            max-width: 20vw;
         }
     }
 } 
@@ -94,6 +101,15 @@ body {
             &--subtitle {
                 font-size: 3rem;
             }
+            .cta-button {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                width: 80vw;
+                img {
+                    width: 1.5rem;
+                    padding: 0.3rem;
+                }
+            }
         }
         &__media {
             &--image {
@@ -102,10 +118,9 @@ body {
                 margin-top: 2rem;
             }
             &--pastille {
-                border: 1px solid red;
                 position: absolute;
-                top: 80vw;
-                left: 75vw;
+                top: 70vw;
+                left: 70vw;
             }
         }
     }
@@ -116,9 +131,87 @@ body {
 .product-container {
     margin: 3rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    &__carousel {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            background-color: @light-grey;
+            padding: 1rem;
+            max-width: 80vw;
+        }
+        &__title {
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            margin: 1rem 0;
+        }
+        &__price {
+            position: absolute;
+            top: 0;
+            left: -4rem;
+            padding: 1rem 1rem;
+            background-color: @dark-green;
+            border-bottom: 10px solid @dark-blue;
+            -webkit-text-stroke: 2px white;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: transparent;
+            text-shadow: 0px 0px 20px @yellow;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .price {
+                text-align: end;
+                font-size: 6rem;
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 2;
+            }
+            .euros {
+                text-align: start;
+                font-size: 3rem;
+                grid-row: 1;
+                grid-column: 3;
+            }
+            .cents {
+                font-size: 3rem;
+                grid-row: 2;
+                grid-column: 3;
+            }
+        }
+
+        // Si le prix est inférieur à 10€, on réduit le nombre de colonnes
+        .less-than-ten {
+            background-color: @light-green;
+            grid-template-columns: repeat(1, 1fr);
+            .price {
+                grid-column: 1 / span 1;
+            }
+        }
+    }
 }
+
+// Product responsive
+@media screen and (max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        &__carousel {
+            &__price {
+                left: 0;
+                top: 0;
+                padding: 0.5rem 0.5rem;
+            }
+        }
+    }
+}
+
 
 // Searchbar
 .searchbar-container {
@@ -139,4 +232,11 @@ body {
     display: flex;
     padding: 6rem;
     justify-content: center;
+    flex-wrap: wrap;
+
+    &__logo {
+        img {
+            max-width: 80vw;
+        }
+    }
 }
