@@ -100,8 +100,8 @@ body {
         &--pastille {
             position: absolute;
             top: 0.5rem;
-            left: 3rem;
-            width: 20%;
+            left: 10rem;
+            width: 15%;
             max-width: 20vw;
         }
     }
@@ -168,8 +168,68 @@ body {
         flex-direction: column;
         align-items: center;
         
+        .slider {
+            width: 20rem;
+            height: 20rem;
+            
+            .small-product1 {
+                background: url('../assets/products/Bouteille_iso_01.png') no-repeat center;
+            }
+            .small-product2 {
+                background: url('../assets/products/Bouteille_iso_02.png') no-repeat center;
+            }
+            .small-product3 {
+                background: url('../assets/products/Bouteille_iso_03.png') no-repeat center;
+            }
+            .small-product4 {
+                background: url('../assets/products/Bouteille_iso_04.png') no-repeat center;
+            }
+            .big-product1 {
+                background: url('../assets/products/Fauteuil_Patchwork-Clr.png') no-repeat center;
+            }
+            .big-product2 {
+                background: url('../assets/products/Fauteuil_Patchwork-Blc.png') no-repeat center;
+            }
+            .single-item {
+                width: 100%;
+                height: 20rem;
+                background-size: contain;
+                background-color: @light-grey;
+            }
+            .slick-arrow  {
+                &::before {
+                    content: '';
+                    background: url('../assets/products/arrow.png') no-repeat center;
+                    background-size: contain;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    top: 75%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            .slick-prev {
+                transform: rotate(180deg);
+            }
+
+            // grossir et changer la couleur des dots de SLICK
+            .slick-dots {
+                li {
+                    button {
+                        &::before {
+                            font-size: 15px;
+                            color: @light-green;
+                        }
+                    }
+                }
+            }
+            
+        }
+
         .neon-icon {
             position: absolute;
+            z-index: 2;
             right: -4rem;
         }
 
@@ -197,7 +257,7 @@ body {
             position: absolute;
             top: 0;
             left: -4rem;
-            padding: 1rem 1rem;
+            padding: 0 1rem 0.5rem 1rem;
             background-color: @dark-green;
             border-bottom: 10px solid @dark-blue;
             -webkit-text-stroke: 2px white;
@@ -251,6 +311,21 @@ body {
 
         &__carousel {
             max-width: 70vw;
+            margin-bottom: 1rem;
+            
+            .slick-arrow.slick-next {
+                right: 0;
+                &::before {
+                    left: -30px;
+                }
+            }
+            .slick-arrow.slick-prev {
+                z-index: 2;
+                &::before {
+                    left: -50px;
+                    position: absolute;
+                }
+            }
             .neon-icon{
                 right: -3rem;
             }

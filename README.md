@@ -80,8 +80,6 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 - Se documenter sur l'option d'une video en background pour le header, avec un fallback image pour les mobiles?
 
 
-
-
 ## Last. Difficultés rencontrées
 
 - Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "varable".  

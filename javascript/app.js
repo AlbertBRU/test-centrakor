@@ -14,6 +14,11 @@ var app = {
             messageDiv.style.display = 'flex';
         });
 
+        // Gestion du carousel by SLICK (https://kenwheeler.github.io/slick/)
+        $('.slider').slick({
+            dots: true,
+        }
+        );
     },
 }
 

@@ -7,6 +7,9 @@
     <meta name="description" content="Centrakor : décoration, mobilier et équipement de la maison">
     <!-- <meta name="robots" content="index, follow"> -->
     <title>Centrakor : décoration, mobilier et équipement de la maison - Centrakor</title>
+    <!-- link CSS de la lib SLICK -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- link LESS -->
     <link rel="stylesheet" href="/css/styles.css" />
     <!-- link FONTS -->
@@ -39,7 +42,12 @@
     <div class="product-container">
         <div class="product-container__carousel">
             <img class="product-container__carousel__icon--blue neon-icon" src="/assets/neons/star-blue.svg" alt="Néon étoile bleu">
-            <img class="product-container__carousel__img" src="/assets/products/Bouteille_iso.png" alt="Bouteille isotherme 50cL">
+            <div class="slider">
+                <div class="single-item small-product1"></div>
+                <div class="single-item small-product2"></div>
+                <div class="single-item small-product3"></div>
+                <div class="single-item small-product4"></div>
+            </div>
             <p class="product-container__carousel__title"> La bouteille isotherme 50cL</p>
             <div class="product-container__carousel__price less-than-ten">
                 <div class="grid-item price">4</div>
@@ -49,7 +57,10 @@
         </div>
         <div class="product-container__carousel">
             <img class="product-container__carousel__icon--yellow neon-icon" src="/assets/neons/star-yellow.svg" alt="Néon étoile jaune">
-            <img class="product-container__carousel__img" src="/assets/products/Fauteuil_patchwork.png" alt="Le fauteuil patchwork">
+            <div class="slider">
+                <div class="single-item big-product1"></div>
+                <div class="single-item big-product2"></div>
+            </div>
             <p class="product-container__carousel__title"> Le fauteuil patchwork</p>
             <div class="product-container__carousel__price">
                 <div class="grid-item price">39</div>
@@ -112,6 +123,9 @@
 
 
     <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    
     <script src="javascript/app.js"></script>
 
 </body>
