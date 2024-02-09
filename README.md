@@ -64,7 +64,7 @@ Mise en place les forms qui renvoient "merci de votre recherche" lorsqu'on valid
 Implémentation basique en JS, il est toujours possible de gérer les edges cases (input vide, input non valide, etc)...
 
 ## 6. Gestion des carousels
-- Trouver une lib pour les carousels, ou les coder à la main? 
+- Implémentation du carousel avec Slick. (https://kenwheeler.github.io/slick/)
 
 ## 8. Gestion des réseaux sociaux
 - Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
