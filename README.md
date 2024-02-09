@@ -63,6 +63,9 @@ Je vais rajouter les différentes regles CSS pour mettre en forme la page. Le si
 Mise en place les forms qui renvoient "merci de votre recherche" lorsqu'on valide l'input.
 Implémentation basique en JS, il est toujours possible de gérer les edges cases (input vide, input non valide, etc)...
 
+## 6. Gestion des carousels
+- Trouver une lib pour les carousels, ou les coder à la main? 
+
 ## 8. Gestion des réseaux sociaux
 - Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
 
@@ -73,11 +76,11 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 
 === WIP ===
 
-## 6. Gestion des carousels
-- Trouver une lib pour les carousels, ou les coder à la main? 
-
 ## 7. Gestion des médias
 - Se documenter sur l'option d'une video en background pour le header, avec un fallback image pour les mobiles?
+
+## 11. Optimisation des ressources
+- Minifier les ressources, compresser les images, faire du lazy loading pour les images, des skeletons le temps que les images se chargent, etc.
 
 
 ## Last. Difficultés rencontrées
@@ -87,3 +90,4 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 -Intégration CSS un peu plus compliquée que prévue, notamment pour la manipulation des éléments en position absolute et leur placement responsive.  
 - Je n'ai pas fait les formes arrondies en background, j'ai déjà passé trop de temps sur le CSS pour le reste.  
 - J'ai eu quelques difficultées à placer les éléments de décoration (flocons, cadeaux) en position absolute. Certains éléments ont nativement un overflow hidden au resize de la fenêtre, et d'autre non... A investiguer.
+- Quelques difficultés à l'intégration de SLICK, rien d'insurmontable cependant.
