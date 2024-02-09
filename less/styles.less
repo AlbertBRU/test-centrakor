@@ -12,14 +12,10 @@
 body {
     margin: 0;
 
-    p {
-        all: unset;
-    }
-
-    button {
-        all: unset;
-        cursor: pointer;
-    }
+    // Plus rapide que de charger un fichier de reset CSS (Meyer/ Alsa...)
+    a { all: unset; cursor: pointer;}
+    p { all: unset; }
+    button { all: unset; cursor: pointer; }
 
     .cta-button {
         background-color: @light-green;
@@ -240,11 +236,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 
     &__title {
         font-size: 2.5rem;
         text-align: center;
-        font-family: 'Montserrat', sans-serif;
         color: @white;
         text-shadow: 0px 0px 20px @light-green;
     }
@@ -315,6 +311,17 @@ body {
             }
         }
     }
+    &__results {
+        margin-top: 2rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: @white;
+        height: 3rem;
+        border-radius: 10px;
+        font-weight: 700;
+
+    }
 }
 
 // Searchbar responsive
@@ -355,7 +362,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     &__logo {
-        // border: 2px solid red;
         max-width: 80vw;
         margin:  4rem;
 
@@ -366,7 +372,6 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        // border: 2px solid blue;
         
         &--title {
             text-transform: uppercase;
@@ -382,6 +387,11 @@ body {
             color: @dark-grey;
             font-size: 1.2rem;
             margin-bottom: 1rem;
+        }
+        &--social-media {
+            img {
+                padding: 0 0.5rem;
+            }
         }
     }
 }

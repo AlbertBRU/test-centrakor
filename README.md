@@ -58,10 +58,18 @@ Je vais commencer par créer la structure HTML de la page. Pas ou peu de style p
 
 Je vais rajouter les différentes regles CSS pour mettre en forme la page. Le site doit être totalement responsive, je pense vérifier la responsivité à chaque étape de la création de la page.
 
-=== WIP ===
 
 ## 5. Gestion des formulaires
-- TODO: Mettre en place les forms qui renvoient "merci de votre recherche" lorsqu'on valide l'input.
+Mise en place les forms qui renvoient "merci de votre recherche" lorsqu'on valide l'input.
+Implémentation basique en JS, il est toujours possible de gérer les edges cases (input vide, input non valide, etc)...
+
+## 8. Gestion des réseaux sociaux
+- Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
+
+## 10. Gestion de l'anchor link
+- Au clic sur le bouton du header, on redirige vers la section "recherche de magasin"
+
+=== WIP ===
 
 ## 6. Gestion des carousels
 - Trouver une lib pour les carousels, ou les coder à la main? 
@@ -69,13 +77,8 @@ Je vais rajouter les différentes regles CSS pour mettre en forme la page. Le si
 ## 7. Gestion des médias
 - Se documenter sur l'option d'une video en background pour le header, avec un fallback image pour les mobiles?
 
-## 8. Gestion des réseaux sociaux
-- Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
 
 ## 9. Gestion des images de cadeaux et de flocons
-
-## 10. Gestion de l'anchor link
-- Dans le bouton du header, rediriger vers la section "recherche de magasin"
 
 
 ## Last. Difficultés rencontrées

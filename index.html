@@ -24,7 +24,7 @@
             <h2 class="header-container__logo--subtitle">Nos coups de cœur à prix magiques !</h2>
             <button class="header-container__logo--button cta-button">
                 <img class="header-container__logo--button--icon" src="/assets/magasins.png" alt="icon de recherche">
-                <p>Je trouve mon magasin</p>
+                <a href="#searchbar">Je trouve mon magasin</a>
             </button>
         </div>
         <div class="header-container__media">
@@ -55,54 +55,30 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- SEARCHBAR -->
-    <div class="searchbar-container">
-        <h2 class="searchbar-container__title">Je cherche mon magasin</h2>
-        <div class="searchbar-container__inputs">
-            <div class="searchbar-container__inputs--search">
-                <input type="text" class="searchbar-container__inputs--search--input" placeholder="Indiquer une ville">
-                <button class="searchbar-container__inputs--search--button">
-                    <img src="/assets/magnifier.png" alt="icon de recherche">
-                </button>
+    <div class="searchbar-container" id="searchbar">
+        <form id="searchForm" method="post" action="">
+            <h2 class="searchbar-container__title">Je cherche mon magasin</h2>
+            <div class="searchbar-container__inputs">
+                <div class="searchbar-container__inputs--search">
+                    <input type="text" name="ville" class="searchbar-container__inputs--search--input"
+                        placeholder="Indiquer une ville">
+                    <button type="submit" class="searchbar-container__inputs--search--button">
+                        <img src="/assets/magnifier.png" alt="icon de recherche">
+                    </button>
+                </div>
+                <div class="searchbar-container__inputs--geoloc">
+                    <input type="text" name="geoloc" class="searchbar-container__inputs--geoloc--input"
+                        placeholder="Magasin autour de moi">
+                    <button type="submit" class="searchbar-container__inputs--geoloc--button">
+                        <img src="/assets/my_location.svg" alt="icon de géolocalisation">
+                    </button>
+                </div>
             </div>
-            <div class="searchbar-container__inputs--geoloc">
-                <input type="text" class="searchbar-container__inputs--geoloc--input"
-                    placeholder="Magasin autour de moi">
-                <button class="searchbar-container__inputs--geoloc--button">
-                    <img src="/assets/my_location.svg" alt="icon de géolocalisation">
-                </button>
-            </div>
-        </div>
+            <div id="message" class="searchbar-container__results">Merci pour votre recherche</div>
+        </form>
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- FOOTER -->
     <div class="footer-container">
@@ -112,13 +88,26 @@
             <button class="footer-container__about-us--button cta-button">Découvrez Centrakor</button>
             <p class="footer-container__about-us--text">et suivez nos aventures sur <br /> les réseaux sociaux</p>
             <div class="footer-container__about-us--social-media">
-                <img src="/assets/social/facebook-logo.svg" alt="logo facebook">
-                <img src="/assets/social/instagram-logo.svg" alt="logo instagram">
-                <img src="/assets/social/pinterest-logo.svg" alt="logo pinterest">
-                <img src="/assets/social/tiktok-logo.svg" alt="logo tiktok">
+                <a href="https://www.facebook.com/centrakor" target="_blank">
+                    <img src="/assets/social/facebook-logo.svg" alt="logo facebook">
+                </a>
+                <a href="https://www.instagram.com/centrakor/" target="_blank">
+                    <img src="/assets/social/instagram-logo.svg" alt="logo instagram">
+                </a>
+                <a href="https://pinterest.com/centrakor" target="_blank">
+                    <img src="/assets/social/pinterest-logo.svg" alt="logo pinterest">
+                </a>
+                <a href="https://www.tiktok.com/@centrakor_officiel" target="_blank">
+                    <img src="/assets/social/tiktok-logo.svg" alt="logo tiktok">
+                </a>
             </div>
         </div>
     </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="javascript/app.js"></script>
+
 </body>
 
 </html>
