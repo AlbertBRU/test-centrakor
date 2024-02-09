@@ -426,6 +426,7 @@ body .cta-button {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 4rem;
 }
 .footer-container__about-us--title {
   text-transform: uppercase;
