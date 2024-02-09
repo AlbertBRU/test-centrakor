@@ -43,6 +43,7 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        position: relative;
 
         &--img {
             width: 28rem;
@@ -61,8 +62,19 @@ body {
             text-shadow: 0px 0px 20px @yellow;
         }
 
+        &--flake {
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+        }
+        &--gift {
+            position: absolute;
+            bottom: -30%;
+            left: 0;
+        }
         &--button {
             text-transform: uppercase;
+            position: relative;
 
             &--icon {
                 padding-right: 1rem;
@@ -103,6 +115,13 @@ body {
         padding-bottom: 0;
 
         &__logo {
+            &--flake {
+                bottom: -50%;
+                right: 0;
+            }
+            &--gift {
+                display: none;
+            }
             &--subtitle {
                 font-size: 3rem;
             }
@@ -112,7 +131,7 @@ body {
                 font-size: 0.9rem;
                 width: 80vw;
 
-                img {
+                .header-container__logo--button--icon {
                     width: 1.5rem;
                     padding: 0.3rem;
                 }
@@ -148,8 +167,21 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        .neon-icon {
+            position: absolute;
+            right: -4rem;
+        }
 
-        img {
+        &__icon--blue {
+            top: -4rem;
+        }
+
+        &__icon--yellow {
+            bottom: -2rem;
+        }
+
+        &__img {
             background-color: @light-grey;
             padding: 1rem;
             max-width: 80vw;
@@ -219,6 +251,9 @@ body {
 
         &__carousel {
             max-width: 70vw;
+            .neon-icon{
+                right: -3rem;
+            }
 
             &__price {
                 left: -1rem;
@@ -286,7 +321,18 @@ body {
         opacity: 0.9;
         display: flex;
         flex-wrap: wrap;
+        position: relative;
 
+        &--icon-gift {
+            position: absolute;
+            top: -6rem;
+            left: -6rem;
+        }
+        &--icon-star {
+            position: absolute;
+            bottom: -6rem;
+            right: 0;
+        }
         // Injections des styles communs, on ne rajoute que la couleur
         &--search {
             .input-common-styles();

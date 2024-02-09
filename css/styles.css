@@ -35,6 +35,7 @@ body .cta-button {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 .header-container__logo--img {
   width: 28rem;
@@ -49,8 +50,19 @@ body .cta-button {
   color: transparent;
   text-shadow: 0px 0px 20px #E7AF00;
 }
+.header-container__logo--flake {
+  position: absolute;
+  bottom: -30%;
+  right: -10%;
+}
+.header-container__logo--gift {
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+}
 .header-container__logo--button {
   text-transform: uppercase;
+  position: relative;
 }
 .header-container__logo--button--icon {
   padding-right: 1rem;
@@ -82,6 +94,13 @@ body .cta-button {
     align-items: center;
     padding-bottom: 0;
   }
+  .header-container__logo--flake {
+    bottom: -50%;
+    right: 0;
+  }
+  .header-container__logo--gift {
+    display: none;
+  }
   .header-container__logo--subtitle {
     font-size: 3rem;
   }
@@ -90,7 +109,7 @@ body .cta-button {
     font-size: 0.9rem;
     width: 80vw;
   }
-  .header-container__logo .cta-button img {
+  .header-container__logo .cta-button .header-container__logo--button--icon {
     width: 1.5rem;
     padding: 0.3rem;
   }
@@ -117,7 +136,17 @@ body .cta-button {
   flex-direction: column;
   align-items: center;
 }
-.product-container__carousel img {
+.product-container__carousel .neon-icon {
+  position: absolute;
+  right: -4rem;
+}
+.product-container__carousel__icon--blue {
+  top: -4rem;
+}
+.product-container__carousel__icon--yellow {
+  bottom: -2rem;
+}
+.product-container__carousel__img {
   background-color: #F5F5F5;
   padding: 1rem;
   max-width: 80vw;
@@ -175,6 +204,9 @@ body .cta-button {
   .product-container__carousel {
     max-width: 70vw;
   }
+  .product-container__carousel .neon-icon {
+    right: -3rem;
+  }
   .product-container__carousel__price {
     left: -1rem;
     top: 0;
@@ -204,6 +236,17 @@ body .cta-button {
   opacity: 0.9;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+.searchbar-container__inputs--icon-gift {
+  position: absolute;
+  top: -6rem;
+  left: -6rem;
+}
+.searchbar-container__inputs--icon-star {
+  position: absolute;
+  bottom: -6rem;
+  right: 0;
 }
 .searchbar-container__inputs--search {
   display: flex;

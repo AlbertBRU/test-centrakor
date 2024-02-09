@@ -66,6 +66,8 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 ## 8. Gestion des réseaux sociaux
 - Toujours cool de pouvoir cliquer sur les icones pour être redirigé vers les réseaux sociaux de la marque.
 
+## 9. Gestion des images de cadeaux et de flocons
+
 ## 10. Gestion de l'anchor link
 - Au clic sur le bouton du header, on redirige vers la section "recherche de magasin"
 
@@ -78,12 +80,12 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 - Se documenter sur l'option d'une video en background pour le header, avec un fallback image pour les mobiles?
 
 
-## 9. Gestion des images de cadeaux et de flocons
 
 
 ## Last. Difficultés rencontrées
 
-- Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "varable". 
-- Les grids. J'ai peu pratiqué les grids, et je me suis dit que ca serait une solution sympa pour le pricing des produits. J'ai donc fait un peu de recherche sur les grids, et j'ai réussi à les mettre en place, tant bien que mal (ce n'est pas parfait, l'élément grid m'empêchant de mettre en place le :after pour le pseudo-élément de la bulle de dialogue).
--Intégration CSS un peu plus compliquée que prévue, notamment pour la manipulation des éléments en position absolute et leur placement responsive.
-- Je n'ai pas fait les formes arrondies en background, j'ai déjà passé trop de temps sur le CSS pour le reste.
+- Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "varable".  
+- Les grids. J'ai peu pratiqué les grids, et je me suis dit que ca serait une solution sympa pour le pricing des produits. J'ai donc fait un peu de recherche sur les grids, et j'ai réussi à les mettre en place, tant bien que mal (ce n'est pas parfait, l'élément grid m'empêchant de mettre en place le :after pour le pseudo-élément de la bulle de dialogue).  
+-Intégration CSS un peu plus compliquée que prévue, notamment pour la manipulation des éléments en position absolute et leur placement responsive.  
+- Je n'ai pas fait les formes arrondies en background, j'ai déjà passé trop de temps sur le CSS pour le reste.  
+- J'ai eu quelques difficultées à placer les éléments de décoration (flocons, cadeaux) en position absolute. Certains éléments ont nativement un overflow hidden au resize de la fenêtre, et d'autre non... A investiguer.
