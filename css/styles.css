@@ -86,13 +86,13 @@ body .cta-button {
 .header-container__media--image {
   width: 40vw;
   height: 40vw;
-  max-width: 45rem;
-  max-height: 45rem;
+  max-width: 41rem;
+  max-height: 41rem;
 }
 .header-container__media--pastille {
   position: absolute;
   top: 0.5rem;
-  left: 10rem;
+  left: 8rem;
   width: 15%;
   max-width: 20vw;
 }
@@ -128,8 +128,8 @@ body .cta-button {
   }
   .header-container__media--pastille {
     position: absolute;
-    top: 70vw;
-    left: 70vw;
+    top: 75vw;
+    left: 75vw;
   }
 }
 .product-container {
