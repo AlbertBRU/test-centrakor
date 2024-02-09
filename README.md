@@ -85,7 +85,7 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 
 ## Last. Difficultés rencontrées
 
-- Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "varable".  
+- Quelques difficultés à passer l'effet "néon" sur le texte, dû au fait que la police soit devenue "variable".  
 - Les grids. J'ai peu pratiqué les grids, et je me suis dit que ca serait une solution sympa pour le pricing des produits. J'ai donc fait un peu de recherche sur les grids, et j'ai réussi à les mettre en place, tant bien que mal (ce n'est pas parfait, l'élément grid m'empêchant de mettre en place le :after pour le pseudo-élément de la bulle de dialogue).  
 -Intégration CSS un peu plus compliquée que prévue, notamment pour la manipulation des éléments en position absolute et leur placement responsive.  
 - Je n'ai pas fait les formes arrondies en background, j'ai déjà passé trop de temps sur le CSS pour le reste.  
