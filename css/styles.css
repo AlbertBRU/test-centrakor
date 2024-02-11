@@ -175,11 +175,11 @@
 .header-container__logo--flake {
   position: absolute;
   bottom: -30%;
-  right: -10%;
+  right: 0;
 }
 .header-container__logo--gift {
   position: absolute;
-  bottom: -30%;
+  bottom: 0;
   left: 0;
 }
 .header-container__logo--button {
