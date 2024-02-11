@@ -38,6 +38,7 @@ body .cta-button {
   display: flex;
   padding: 4rem;
   align-items: center;
+  justify-content: space-evenly;
 }
 .header-container__logo {
   display: flex;
@@ -77,7 +78,6 @@ body .cta-button {
 }
 .header-container__media {
   position: relative;
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,10 +91,10 @@ body .cta-button {
 }
 .header-container__media--pastille {
   position: absolute;
-  top: 0.5rem;
-  left: 8rem;
-  width: 15%;
-  max-width: 20vw;
+  top: 0;
+  left: -5%;
+  width: 27%;
+  max-width: 25vw;
 }
 @media screen and (max-width: 900px) {
   .header-container {
@@ -127,9 +127,8 @@ body .cta-button {
     margin-top: 2rem;
   }
   .header-container__media--pastille {
-    position: absolute;
-    top: 75vw;
-    left: 75vw;
+    top: 70%;
+    left: 70%;
   }
 }
 .product-container {

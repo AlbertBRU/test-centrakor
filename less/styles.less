@@ -50,6 +50,7 @@ body {
     display: flex;
     padding: 4rem;
     align-items: center;
+    justify-content: space-evenly;
 
     &__logo {
         display: flex;
@@ -95,11 +96,11 @@ body {
 
     &__media {
         position: relative;
-        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
+        // border: 1px solid red;
 
         &--image {
             width: 40vw;
@@ -110,10 +111,10 @@ body {
 
         &--pastille {
             position: absolute;
-            top: 0.5rem;
-            left: 8rem;
-            width: 15%;
-            max-width: 20vw;
+            top: 0;
+            left: -5%;
+            width: 27%;
+            max-width: 25vw;
         }
     }
 }
@@ -157,9 +158,8 @@ body {
             }
 
             &--pastille {
-                position: absolute;
-                top: 75vw;
-                left: 75vw;
+                top: 70%;
+                left: 70%;
             }
         }
     }
