@@ -11,7 +11,7 @@ var app = {
             console.log('submit');
             const ville = form.elements.ville.value;
             console.log('ville', ville);
-            messageDiv.style.display = 'flex';
+            messageDiv.classList.add('display-results');
         });
 
         // Gestion du carousel by SLICK (https://kenwheeler.github.io/slick/)

@@ -249,7 +249,7 @@ body .cta-button {
 .product-container__carousel .less-than-ten .price {
   grid-column: 1 / span 1;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .product-container {
     flex-direction: column;
     align-items: center;
@@ -388,6 +388,9 @@ body .cta-button {
   border-radius: 10px;
   font-weight: 700;
 }
+.searchbar-container .display-results {
+  display: flex;
+}
 @media screen and (max-width: 900px) {
   .searchbar-container__title {
     font-size: 2rem;
@@ -441,6 +444,9 @@ body .cta-button {
   color: #434343;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+.footer-container__about-us--social-media {
+  margin-bottom: 3rem;
 }
 .footer-container__about-us--social-media img {
   padding: 0 0.5rem;
