@@ -1,0 +1,137 @@
+// Searchbar
+.searchbar-container {
+    padding: 3rem;
+    background-color: @dark-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        color: @white;
+        text-shadow: 0px 0px 20px @light-green;
+    }
+
+    // Mixin pour les styles communs aux deux types d'inputs
+    .input-common-styles() {
+        display: flex;
+        flex: 1;
+        position: relative;
+        margin-right: 1.5rem;
+
+        &--input {
+            flex: 1;
+            height: 4.2rem;
+            padding-left: 1rem;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        &--button {
+            position: absolute;
+            right: 0;
+            border-radius: 5px;
+            height: 4.5rem;
+            width: 4.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    // Cadre blanc des inputs
+    &__inputs {
+        background: white;
+        padding: 3rem 8rem;
+        width: 77rem;
+        max-width: 70vw;
+        border-radius: 5px;
+        opacity: 0.9;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        &--icon-gift {
+            position: absolute;
+            top: -6rem;
+            left: -6rem;
+        }
+        &--icon-star {
+            position: absolute;
+            bottom: -6rem;
+            right: 0;
+        }
+        // Injections des styles communs, on ne rajoute que la couleur
+        &--search {
+            .input-common-styles();
+
+            &--button {
+                background-color: black;
+            }
+        }
+
+        &--geoloc {
+            .input-common-styles();
+
+            &--input {
+                border: 1px solid @light-green;
+                &::placeholder {
+                    color: @light-green;
+                }
+            }
+            
+            &--button {
+                background-color: @light-green;
+            }
+        }
+    }
+    &__results {
+        margin-top: 2rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: @white;
+        height: 3rem;
+        border-radius: 10px;
+        font-weight: 700;
+    }
+    .display-results {
+        display: flex;
+    }
+}
+
+// Searchbar responsive
+@media screen and (max-width: 900px) {
+    .searchbar-container {
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__inputs {
+            padding: 1rem 2rem;
+            width: 100%;
+            flex-direction: column;
+
+            &--search {
+                width: 100%;
+                &--input {
+                    padding-left: 0.5rem;
+                }
+            }
+
+            &--geoloc {
+                width: 100%;
+                margin-top: 1rem;
+                &--input {
+                    padding-left: 0.5rem;
+                }
+            }
+
+        }
+    }
+}

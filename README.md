@@ -74,6 +74,12 @@ Implémentation basique en JS, il est toujours possible de gérer les edges case
 ## 10. Gestion de l'anchor link
 - Au clic sur le bouton du header, on redirige vers la section "recherche de magasin"
 
+## 12. FIXES & OPTIMISATION
+- Fix du breakpoint trop tardif qui causait un overlap des flèches du carousel entre 1000px et 900px de largeur d'écran. Changement du BP pour fix.
+- Fix de la pastille qui ne suivait pas correctement l'image. Le container de l'image est maintenant en fit-content, son espacement avec le bloc de gauche est géré en space-evenly, et la pastille est recalculée en pourcentage de la largeur de l'image.
+- Refactorisation du CSS pour ne plus avoir un fichier de 600 lignes mais un fichier par section. J'ai cherché (et trouvé) comment ne compiler qu'un seul fichier css à partir de plusieurs fichiers less, en important les fichiers auxiliaires dans le fichier principal. J'ai donc maintenant un fichier style.less qui importe tous les autres fichiers less, et une config JSON pour le watch-compiler qui détecte les changements dans les fichiers less et les compile en un seul fichier css.
+
+
 === WIP ===
 
 ## 7. Gestion des médias
